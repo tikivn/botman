@@ -168,7 +168,7 @@ class Command
     /**
      * @return string
      */
-    public function getPattern(): string
+    public function getPattern()
     {
         return $this->pattern;
     }
@@ -184,7 +184,7 @@ class Command
     /**
      * @return array
      */
-    public function getMiddleware(): array
+    public function getMiddleware()
     {
         return $this->middleware;
     }

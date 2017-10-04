@@ -22,5 +22,5 @@ interface ExceptionHandlerInterface
      * @param callable $closure
      * @return mixed
      */
-    public function register(string $exception, callable $closure);
+    public function register($exception, callable $closure);
 }
