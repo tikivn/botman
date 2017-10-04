@@ -201,7 +201,7 @@ class IncomingMessage
     /**
      * @return \BotMan\BotMan\Messages\Attachments\Location
      */
-    public function getLocation() : Location
+    public function getLocation()
     {
         return $this->location;
     }
@@ -209,7 +209,7 @@ class IncomingMessage
     /**
      * @return bool
      */
-    public function isFromBot(): bool
+    public function isFromBot()
     {
         return $this->isFromBot;
     }
@@ -217,7 +217,7 @@ class IncomingMessage
     /**
      * @param bool $isFromBot
      */
-    public function setIsFromBot(bool $isFromBot)
+    public function setIsFromBot($isFromBot)
     {
         $this->isFromBot = $isFromBot;
     }

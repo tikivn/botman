@@ -32,7 +32,7 @@ class MatchingMessage
     /**
      * @return Command
      */
-    public function getCommand(): Command
+    public function getCommand()
     {
         return $this->command;
     }
@@ -40,7 +40,7 @@ class MatchingMessage
     /**
      * @return \BotMan\BotMan\Messages\Incoming\IncomingMessage
      */
-    public function getMessage(): IncomingMessage
+    public function getMessage()
     {
         return $this->message;
     }
@@ -48,7 +48,7 @@ class MatchingMessage
     /**
      * @return array
      */
-    public function getMatches(): array
+    public function getMatches()
     {
         return $this->matches;
     }

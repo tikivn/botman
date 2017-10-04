@@ -63,7 +63,7 @@ class ConversationManager
      * @param bool $withReceivedMiddleware
      * @return array|MatchingMessage[]
      */
-    public function getMatchingMessages($messages, MiddlewareManager $middleware, Answer $answer, DriverInterface $driver, $withReceivedMiddleware = true) : array
+    public function getMatchingMessages($messages, MiddlewareManager $middleware, Answer $answer, DriverInterface $driver, $withReceivedMiddleware = true)
     {
         $matcher = new Matcher();
         $messages = Collection::make($messages)->reject(function (IncomingMessage $message) {

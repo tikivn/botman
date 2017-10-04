@@ -122,16 +122,16 @@ class FakeDriver implements DriverInterface, VerifiesService
 
     public function setUser(array $user_info)
     {
-        $this->user_id = $user_info['id'] ?? $this->user_id;
-        $this->user_first_name = $user_info['first_name'] ?? $this->user_first_name;
-        $this->user_last_name = $user_info['last_name'] ?? $this->user_last_name;
-        $this->username = $user_info['username'] ?? $this->username;
+        $this->user_id = $user_info['id'] ?: $this->user_id;
+        $this->user_first_name = $user_info['first_name'] ?: $this->user_first_name;
+        $this->user_last_name = $user_info['last_name'] ?: $this->user_last_name;
+        $this->username = $user_info['username'] ?: $this->username;
         $this->user_info = $user_info;
     }
 
     public function getUser(IncomingMessage $matchingMessage)
     {
-        return new User($this->user_id ?? $matchingMessage->getSender(), $this->user_first_name, $this->user_last_name, $this->username, $this->user_info);
+        return new User($this->user_id ?: $matchingMessage->getSender(), $this->user_first_name, $this->user_last_name, $this->username, $this->user_info);
     }
 
     public function getConversationAnswer(IncomingMessage $message)

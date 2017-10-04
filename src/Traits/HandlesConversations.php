@@ -42,7 +42,7 @@ trait HandlesConversations
             'additionalParameters' => serialize($additionalParameters),
             'next' => $this->prepareCallbacks($next),
             'time' => microtime(),
-        ], $this->config['config']['conversation_cache_time'] ?? 30);
+        ], $this->config['config']['conversation_cache_time'] ?: 30);
     }
 
     /**
@@ -76,7 +76,7 @@ trait HandlesConversations
             $touched = $this->currentConversationData;
             $touched['time'] = microtime();
 
-            $this->cache->put($this->message->getConversationIdentifier(), $touched, $this->config['conversation_cache_time'] ?? 30);
+            $this->cache->put($this->message->getConversationIdentifier(), $touched, $this->config['conversation_cache_time'] ?: 30);
         }
     }
 
