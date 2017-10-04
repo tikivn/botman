@@ -4,7 +4,6 @@ namespace BotMan\BotMan\Messages\Conversations;
 
 use Closure;
 use BotMan\BotMan\BotMan;
-use Spatie\Macroable\Macroable;
 use Illuminate\Support\Collection;
 use BotMan\BotMan\Interfaces\ShouldQueue;
 use BotMan\BotMan\Messages\Attachments\Audio;
@@ -19,7 +18,6 @@ use BotMan\BotMan\Messages\Incoming\IncomingMessage;
  */
 abstract class Conversation
 {
-    use Macroable;
 
     /**
      * @var BotMan
